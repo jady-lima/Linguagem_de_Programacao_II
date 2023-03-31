@@ -59,8 +59,11 @@ public class Turma {
     //Método que calcula a média da turma
     public double calcularMedia()
     {
-        double mediaTurma;
-        mediaTurma = (alunos.get(0).calcularMedia() + alunos.get(1).calcularMedia() + alunos.get(2).calcularMedia()) / numeroAlunos();
+        double mediaTurma = 0;
+        for (int i = 0; i < numeroAlunos(); i++) {
+            mediaTurma += alunos.get(i).calcularMedia();
+        }
+        mediaTurma = mediaTurma / numeroAlunos();
         return mediaTurma;
     }
 

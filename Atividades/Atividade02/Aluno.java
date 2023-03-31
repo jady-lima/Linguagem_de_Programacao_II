@@ -52,8 +52,12 @@ public class Aluno {
     //Método que calcula a média do aluno
     public double calcularMedia()
     {
-        double mediaAluno;
-        mediaAluno = (prova1.calcularNotaTotal() + prova2.calcularNotaTotal()) / numeroProvas();
+        double mediaAluno = 0;
+        for (int i = 0; i < numeroProvas(); i++)
+        {
+            mediaAluno += provas.get(i).calcularNotaTotal();
+        }
+        mediaAluno = mediaAluno / numeroProvas();
         return mediaAluno;
     }
 
