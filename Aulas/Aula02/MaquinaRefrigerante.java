@@ -1,6 +1,7 @@
 package Aula02;
 
-public class MaquinaRefrigerante {
+public class MaquinaRefrigerante
+{
     //ATRIBUTOS 
     private int preco;
     private int balanco;
@@ -9,6 +10,12 @@ public class MaquinaRefrigerante {
     //METODO CONSTRUTOR DA CLASSE
     public MaquinaRefrigerante (int valor) {
         preco = valor;
+        balanco = 0;
+        total = 0;
+    }
+
+    public MaquinaRefrigerante() {
+        preco = 0;
         balanco = 0;
         total = 0;
     }
@@ -43,7 +50,7 @@ public class MaquinaRefrigerante {
         System.out.println("####################");
         System.out.println("# PREÇO            #");
         System.out.println("# REFRIGERANTE:    #");
-        System.out.println("# R$ " + preco + "         #");
+        System.out.println("# R$ " + preco + ",00          #");
         System.out.println("####################");
     }
 }
