@@ -1,5 +1,3 @@
-package Atividades.Atividade02;
-
 public class Aluno {
     //OBJETOS DO TIPO PROVA
     Prova prova1;

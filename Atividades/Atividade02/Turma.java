@@ -1,23 +1,21 @@
-package Atividades.Atividade02;
-
 import java.util.ArrayList;
 
 public class Turma {
     //OBJETOS DO TIPO ALUNO
-    Aluno aluno1;
-    Aluno aluno2;
-    Aluno aluno3;
+    Aluno aluno1, aluno2, aluno3;
 
     //ARRAY DE ALUNOS
     private ArrayList<Aluno> alunos;
 
     //CONSTRUTOR DA CLASSE
-    public Turma(double nota1Parte1, double nota1Parte2, double nota2Parte1, double nota2Parte2)
+    public Turma(double aluno1nota1Parte1, double aluno1nota1Parte2, double aluno1nota2Parte1, double aluno1nota2Parte2,
+                double aluno2nota1Parte1, double aluno2nota1Parte2, double aluno2nota2Parte1, double aluno2nota2Parte2,
+                double aluno3nota1Parte1, double aluno3nota1Parte2, double aluno3nota2Parte1, double aluno3nota2Parte2)
     {
         alunos = new ArrayList<Aluno>();
-        aluno1 = new Aluno(nota1Parte1, nota1Parte2, nota2Parte1, nota2Parte2);
-        aluno2 = new Aluno(nota1Parte1, nota1Parte2, nota2Parte1, nota2Parte2);
-        aluno3 = new Aluno(nota1Parte1, nota1Parte2, nota2Parte1, nota2Parte2);
+        aluno1 = new Aluno(aluno1nota1Parte1, aluno1nota1Parte2, aluno1nota2Parte1, aluno1nota2Parte2);
+        aluno2 = new Aluno(aluno2nota1Parte1, aluno2nota1Parte2, aluno2nota2Parte1, aluno2nota2Parte2);
+        aluno3 = new Aluno(aluno3nota1Parte1, aluno3nota1Parte2, aluno3nota2Parte1, aluno3nota2Parte2);
         novoAluno(aluno1);
         novoAluno(aluno2);
         novoAluno(aluno3);
@@ -32,12 +30,22 @@ public class Turma {
         }
         else if (indiceAluno < numeroAlunos())
         {
-            System.out.println("Parte 1 da nota 1: " + alunos.get(indiceAluno).prova1.getNotaParte1());
-            System.out.println("Parte 2 da nota 1: " + alunos.get(indiceAluno).prova1.getNotaParte2());
-            System.out.println("Parte 1 da nota 2: " + alunos.get(indiceAluno).prova2.getNotaParte1());
-            System.out.println("Parte 2 da nota 2: " + alunos.get(indiceAluno).prova2.getNotaParte2());
-            System.out.println("Media da prova: " + alunos.get(indiceAluno).calcularMedia());
-            System.out.println("Media do aluno: " + alunos.get(indiceAluno).calcularMedia());
+            System.out.println("--------------------------");
+            System.out.println("|         ALUNO " + (indiceAluno+1) + "        |");
+            System.out.println("##########################");
+            System.out.println("# Parte 1 da nota 1: " + alunos.get(indiceAluno).prova1.getNotaParte1() + " #");
+            System.out.println("# Parte 2 da nota 1: " + alunos.get(indiceAluno).prova1.getNotaParte2() + " #");
+            System.out.println("# ---------------------- #");
+            System.out.println("# Media da prova 1: " + alunos.get(indiceAluno).prova1.calcularNotaTotal() + "  #");
+            System.out.println("# ---------------------- #");
+            System.out.println("# Parte 1 da nota 2: " + alunos.get(indiceAluno).prova2.getNotaParte1() + " #");
+            System.out.println("# Parte 2 da nota 2: " + alunos.get(indiceAluno).prova2.getNotaParte2() + " #");
+            System.out.println("# ---------------------- #");
+            System.out.println("# Media da prova 2: " + alunos.get(indiceAluno).prova2.calcularNotaTotal() + "  #");
+            System.out.println("# ---------------------- #");
+            System.out.println("# Media do aluno: " + alunos.get(indiceAluno).calcularMedia() + "   #");
+            System.out.println("##########################");
+            System.out.println("");
         }
     }
 

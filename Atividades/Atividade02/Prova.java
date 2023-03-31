@@ -1,7 +1,3 @@
-package Atividades.Atividade02;
-
-import java.util.ArrayList;
-
 public class Prova {
     //ATRIBUTOS
     private double notaParte1;
