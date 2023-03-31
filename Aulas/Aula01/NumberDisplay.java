@@ -34,5 +34,4 @@ public class NumberDisplay
     {
         value = v;
     }
-
 }

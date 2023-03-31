@@ -10,5 +10,4 @@ public class NumberDisplayView{
         System.out.println("Limite: " + numberDisplay.getLimit());
         System.out.println("Valor: " + numberDisplay.getValue());
     }
-    
 }
