@@ -1,7 +1,8 @@
 package Aula01;
 
 public class NumberDisplayView{
-    public static void main (String arg[]){
+    public static void main (String arg[])
+    {
         NumberDisplay numberDisplay = new NumberDisplay();
 
         //CHAMA OS MÉTODOS DE MODIFICAR AS VARIAVEIS
