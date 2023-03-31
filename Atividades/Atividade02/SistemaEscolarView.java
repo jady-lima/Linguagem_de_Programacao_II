@@ -1,3 +1,5 @@
+package Atividades.Atividade02;
+
 public class SistemaEscolarView {
     public static void main(String[] args) {
         Turma turma = new Turma(4, 2.5, 5, 3);

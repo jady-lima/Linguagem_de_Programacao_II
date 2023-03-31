@@ -1,6 +1,4 @@
-//DESCRIÇÃO
-//Calcula a média do aluno
-//A média é calculada utilizando a nota total das duas provas realizadas por ele
+package Atividades.Atividade02;
 
 public class Aluno {
     //OBJETOS DO TIPO PROVA

@@ -1,3 +1,5 @@
+package Atividades.Atividade02;
+
 import java.util.ArrayList;
 
 public class Prova {
