@@ -1,16 +1,16 @@
 public class Prova {
-    //ATRIBUTOS
+    //Atributos
     private double notaParte1;
     private double notaParte2;
 
-    //CONSTRUTOR DA CLASSE
+    //Cosntrutor da classe
     public Prova(double parte1, double parte2)
     {
         setNotaParte1(parte1);
         setNotaParte2(parte2);
     }
 
-    //MÉTODO QUE CALCULA A NOTA TOTAL DA PROVA
+    //Método que calcula a nota total da prova
     public double calcularNotaTotal()
     {
         double notaTotal = getNotaParte1() + getNotaParte2();
@@ -21,25 +21,25 @@ public class Prova {
         return notaTotal;
     }
 
-    //MÉTODO DE ACESSO DA PARTE1 DA NOTA
+    //Método de acesso a parte1 da prova
     public double getNotaParte1()
     {
         return notaParte1;
     }
 
-    //MÉTODO DE EDIÇÃO DO PARTE1 DA NOTA
+    //Método de edição a parte1 da prova
     public void setNotaParte1(double parte1)
     {
         notaParte1 = parte1;
     }
 
-    //MÉTODO DE ACESSO DA PARTE2 DA NOTA
+    //Método de acesso a parte2 da prova
     public double getNotaParte2()
     {
         return notaParte2;
     }
 
-    //MÉTODO DE EDIÇÃO DO PARTE2 DA NOTA
+    //Método de acesso a parte2 da prova
     public void setNotaParte2(double parte2)
     {
         notaParte2 = parte2;
