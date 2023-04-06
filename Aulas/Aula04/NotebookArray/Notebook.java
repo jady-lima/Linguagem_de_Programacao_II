@@ -60,9 +60,11 @@ public class Notebook
     //Método que lista todas as notas registradas no Array
     public void listNotes()
     {
+        System.out.println("------------NOTES------------");
         for (String note : notes) 
         {
             System.out.println(note);
         }
+        System.out.println("-----------------------------\n");
     }
 }

@@ -18,7 +18,7 @@ public class NotebookView {
         notebook.storeNote(note);
 
         //Apresenta na tela a quantidade de notes
-        System.out.println(notebook.numberOfNotes());
+        System.out.println("Número de notas registradas: " + notebook.numberOfNotes());
 
         //Imprime todas as notes armazenadas
         notebook.listNotes();
