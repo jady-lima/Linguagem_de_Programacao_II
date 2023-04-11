@@ -59,9 +59,12 @@ public class LojaView
         deposito.addProduto(produtoNaoDuravel3);
 
         System.out.println("Quantidade de produtos no estoque: " + deposito.produtoEmEstoque());
+        deposito.listaProdutos();
         deposito.removeProduto(3);
         System.out.println("Quantidade de produtos no estoque: " + deposito.produtoEmEstoque());
         deposito.EstoqueVazio();
         System.out.println("O produto com maior valor tem o indice: " + deposito.produtoMaiorPreco());
+        System.out.println("O produto selecionado foi:");
+        deposito.mostraProdutos(2);
     }
 }
