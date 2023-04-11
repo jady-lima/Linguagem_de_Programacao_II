@@ -73,4 +73,35 @@ public class Deposito
         }
         return indice;
     }
+
+    //Método para mostrar os produtos
+    public void mostraProdutos(int indiceProduto)
+    {
+        if (indiceProduto < 0)
+        {
+            System.out.println("Entrada inválida");
+        }
+        else if (indiceProduto < produtoEmEstoque())
+        {
+            System.out.println("-------------------------------------");
+            System.out.println("             PRODUTO " + (indiceProduto+1) + "             ");
+            System.out.println("#####################################");
+            System.out.println(" Nome: " + produtos.get(indiceProduto).getNome());
+            System.out.println(" Preco: " + produtos.get(indiceProduto).getPreco());
+            System.out.println(" Marca: " + produtos.get(indiceProduto).getMarca());
+            System.out.println(" Preco: " + produtos.get(indiceProduto).getDescricao());
+            System.out.println(" Classe: " + produtos.get(indiceProduto).getClass());
+            System.out.println("#####################################");
+            System.out.println("");
+        }
+    }
+
+    //Método de listagem de todos os produtos
+    public void listaProdutos()
+    {
+        for (int i = 0; i <= produtoEmEstoque(); i++)
+        {
+            mostraProdutos(i);
+        }
+    }
 }
