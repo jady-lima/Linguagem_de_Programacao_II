@@ -58,18 +58,19 @@ public class Deposito
     {
         //variaveis auxiliares
         int indice = 0;
-        int i = 0;
         Produto produtoAuxiliar = new Produto();
 
-        for (Produto produto : produtos)
+        for (int i = 0; i<produtoEmEstoque(); i++)
         {
-            if(produto.getPreco() > produtoAuxiliar.getPreco())
+            if(produtos.get(i).getPreco() > produtoAuxiliar.getPreco())
             {
+                produtoAuxiliar.setNome(produtos.get(i).getNome());
+                produtoAuxiliar.setPreco(produtos.get(i).getPreco());
+                produtoAuxiliar.setMarca(produtos.get(i).getMarca());
+                produtoAuxiliar.setDescricao(produtos.get(i).getDescricao());
                 indice = i;
             }
-            i++;
         }
-
         return indice;
     }
 }
