@@ -8,7 +8,7 @@ public class LojaView
         //Objetos do tipo produtoDuravel
         ProdutoDuravel produtoDuravel1 = new ProdutoDuravel();
         produtoDuravel1.setNome("Carro");
-        produtoDuravel1.setPreco(100000.00);
+        produtoDuravel1.setPreco(130000);
         produtoDuravel1.setMarca("Hyundai");
         produtoDuravel1.setDescricao("Carro esportivo");
         produtoDuravel1.setDurabilidade(50);
@@ -24,7 +24,7 @@ public class LojaView
 
         ProdutoDuravel produtoDuravel3 = new ProdutoDuravel();
         produtoDuravel3.setNome("Celular");
-        produtoDuravel3.setPreco(2999.90);
+        produtoDuravel3.setPreco(1200);
         produtoDuravel3.setMarca("Samsung");
         produtoDuravel3.setDescricao("S23");
         produtoDuravel3.setDurabilidade(8);
@@ -62,6 +62,6 @@ public class LojaView
         deposito.removeProduto(3);
         System.out.println("Quantidade de produtos no estoque: " + deposito.produtoEmEstoque());
         deposito.EstoqueVazio();
-        deposito.produtoMaiorPreco();
+        System.out.println("O produto com maior valor tem o indice: " + deposito.produtoMaiorPreco());
     }
 }
