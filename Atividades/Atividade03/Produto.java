@@ -1,10 +1,10 @@
 public class Produto
 {
     //Atributos
-    private String nome;
-    private double preco;
-    private String marca;
-    private String descricao;
+    protected String nome;
+    protected double preco;
+    protected String marca;
+    protected String descricao;
 
     //Construtor
     public Produto()
