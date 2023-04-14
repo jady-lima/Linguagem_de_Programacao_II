@@ -2,7 +2,8 @@ import java.util.ArrayList;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Alunos {
+public class Alunos 
+{
     //Atiibutos
     private String nome;
     private String cpf;
@@ -22,7 +23,7 @@ public class Alunos {
     //Método de edição da data de nascimento
     public void setNascimento(String d)
     {
-        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+        SimpleDateFormat formato = new SimpleDateFormat("dd/mm/yyyy");
         nascimento = null;
         try 
         {
@@ -66,6 +67,17 @@ public class Alunos {
     public int quantidadeHorarios()
     {
         return horarios.size();
+    }
+
+    //Método que lista os horarios aluno
+    public void listaAtividadePorHorarios()
+    {
+        for (Horarios horario : horarios) 
+        {
+            for (String atividade : atividades) {
+                System.out.println("Hora: " + horario.getHora() + " | Dia: " + horario.getDia() + " | Atividade: " + atividade);
+            }
+        }
     }
 
     //Método de inserção de um nova Atividade

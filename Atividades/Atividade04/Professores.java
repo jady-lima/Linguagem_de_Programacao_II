@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 
-public class Professores extends Funcionarios{
+public class Professores extends Funcionarios
+{
     //Atributos
     private boolean natacao = false;
     private boolean musculacao = false;
@@ -43,6 +44,16 @@ public class Professores extends Funcionarios{
         return alunos.size();
     }
 
+    //Método que lista os alunos 
+    public void listaAlunos()
+    {
+        for (Alunos aluno : alunos) 
+        {
+            System.out.println("Aluno >>> " + aluno.getNome());
+            aluno.listaAtividadePorHorarios();
+        }
+    }
+
     //Método de retorno da natação
     public boolean getNatacao()
     {
@@ -61,6 +72,7 @@ public class Professores extends Funcionarios{
         return musculacao;
     }
 
+    //Método de edição de musculação
     public void setMusculacao(boolean m)
     {
         musculacao = m;

@@ -1,4 +1,5 @@
-public class Horarios {
+public class Horarios 
+{
     //Atributos
     private String dia;
     private String hora;
