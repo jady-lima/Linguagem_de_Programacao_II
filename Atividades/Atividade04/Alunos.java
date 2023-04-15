@@ -1,6 +1,6 @@
-import java.util.ArrayList;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.ArrayList;
 
 public class Alunos 
 {
@@ -21,14 +21,15 @@ public class Alunos
     }
 
     //Método de edição da data de nascimento
-    public void setNascimento(String d)
+    public void setNascimento(String data)
     {
         SimpleDateFormat formato = new SimpleDateFormat("dd/mm/yyyy");
         nascimento = null;
         try 
         {
-            nascimento = formato.parse(d);
-        } catch (Exception e) 
+            nascimento = formato.parse(data);
+        } 
+        catch (Exception e) 
         {
             e.printStackTrace();
         }
