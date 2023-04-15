@@ -44,7 +44,7 @@ public class Recepcionistas extends Funcionarios
     public void listaHorarios()
     {
         for (Horarios horario : horarios) {
-            System.out.println("Dia: " + horario.getDia() + " | Hora: " + horario.getHora());
+            System.out.println("| > Dia: " + horario.getDia() + " Hora: " + horario.getHora() + "\t\t\t\t\t\t|");
         }
     }  
 }
