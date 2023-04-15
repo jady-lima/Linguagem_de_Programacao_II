@@ -35,7 +35,7 @@ public class Alunos
         }
     }
 
-    //Método de acesso da validade
+    //Método de acesso da data de nascimento
     public Date getNascimento()
     {
         return nascimento;
@@ -75,7 +75,8 @@ public class Alunos
     {
         for (Horarios horario : horarios) 
         {
-            for (String atividade : atividades) {
+            for (String atividade : atividades) 
+            {
                 System.out.println("Hora: " + horario.getHora() + " | Dia: " + horario.getDia() + " | Atividade: " + atividade);
             }
         }
