@@ -49,9 +49,23 @@ public class Professores extends Funcionarios
     {
         for (Alunos aluno : alunos) 
         {
-            System.out.println("Aluno >>> " + aluno.getNome());
+            System.out.println("| Aluno >>> " + aluno.getNome() + "\t\t\t\t\t\t|");
             aluno.listaAtividadePorHorarios();
         }
+    }
+
+    //Método que retorna uma aluno pelo indice
+    public Alunos retornaAluno(int indiceAluno)
+    {
+        if (indiceAluno < 0)
+        {
+            System.out.println("Entrada inválida");
+        }
+        else if (indiceAluno < quantidadeAlunos())
+        {
+            return alunos.get(indiceAluno);
+        }
+        return alunos.get(indiceAluno);
     }
 
     //Método de retorno da natação
