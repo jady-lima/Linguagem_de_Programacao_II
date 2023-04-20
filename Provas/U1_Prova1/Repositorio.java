@@ -4,7 +4,6 @@ public class Repositorio
 {
     //Array de veiculos
     private ArrayList<Veiculos> veiculos;
-    private int numeroMarcas;
 
     //Construtor
     public Repositorio()
@@ -116,18 +115,6 @@ public class Repositorio
             }
         }
         return indice;
-    }
-
-    //Método de acesso
-    public int getNumeroMarcas()
-    {
-        return numeroMarcas;
-    }
-
-    //Método de edição
-    public void setNumeroMarcas(int n)
-    {
-        this.numeroMarcas = n;
     }
 
 }
