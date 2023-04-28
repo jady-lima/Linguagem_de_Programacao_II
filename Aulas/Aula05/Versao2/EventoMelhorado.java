@@ -12,17 +12,17 @@ public class EventoMelhorado
         return descricao;
     }       
 	
+	//Funcao de edição da descrição
+	public void setDescricao(String descricao)
+	{
+		this.descricao = descricao;
+	}
+
 	//Método de acesso a Data
 	public Date getData()
 	{
         return data;
     } 
-	
-	//Funcao de edição da descrição
-	public void setDescricao(String str)
-	{
-		this.descricao = str;
-	}
 	
 	//Método de edição da data
 	public void setData(Date data)
@@ -30,7 +30,3 @@ public class EventoMelhorado
 		this.data = data;
 	}
 }
-
-
-
-

@@ -4,9 +4,9 @@ public class EscolaMelhorada
     private EventoMelhorado evento;
 	
 	//Função de edição de um evento
-	public void setEvento(EventoMelhorado evt)
+	public void setEvento(EventoMelhorado evento)
 	{
-		this.evento = evt;
+		this.evento = evento;
 	}
 	
 	//Método de acesso ao evento
@@ -23,6 +23,3 @@ public class EscolaMelhorada
         System.out.println("Data: " + getEvento().getData());		
     }    
 }
-
-
-
