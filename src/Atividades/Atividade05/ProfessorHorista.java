@@ -8,16 +8,18 @@ public class ProfessorHorista extends Professor
 	
 	private int horasTrabalhadas;
 
-	public ProfessorHorista(String nome, String matricula, Date dataNascimento, String nivelEscolaridade,String disciplina, double salario, int horasTrabalhadas) {
+	public ProfessorHorista(String nome, String matricula, String dataNascimento, String nivelEscolaridade,String disciplina, double salario, int horasTrabalhadas) {
 		super(nome, matricula, dataNascimento, nivelEscolaridade, disciplina, salario);
 		this.horasTrabalhadas = horasTrabalhadas;
 	}
 
-	public int getHorasTrabalhadas() {
+	public int getHorasTrabalhadas() 
+	{
 		return horasTrabalhadas;
 	}
 
-	public void setHorasTrabalhadas(int horasTrabalhadas) {
+	public void setHorasTrabalhadas(int horasTrabalhadas) 
+	{
 		this.horasTrabalhadas = horasTrabalhadas;
 	}
 	

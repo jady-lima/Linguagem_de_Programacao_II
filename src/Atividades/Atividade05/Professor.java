@@ -1,5 +1,6 @@
 package Atividades.Atividade05;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class Professor 
@@ -12,14 +13,21 @@ public class Professor
 	protected double salario;
 	
 	//Construtor da classe
-	public Professor(String nome, String matricula, Date dataNascimento, String nivelEscolaridade, String disciplina, double salario) 
+	public Professor(String nome, String matricula, String dataNascimento, String nivelEscolaridade, String disciplina, double salario) 
 	{
 		this.nome = nome;
 		this.matricula = matricula;
-		this.dataNascimento = dataNascimento;
+		setDataNascimento(dataNascimento);
 		this.nivelEscolaridade = nivelEscolaridade;
 		this.disciplina = disciplina;
 		this.salario = salario;
+	}
+	
+	public void lecionar()
+	{
+		System.out.println("Nome: " + getNome() + "; \t" + "Matricula: " + getMatricula());
+		System.out.println("Data de Nascimento: " + getDataNascimento() + "; \t" + "Nivel de escolaridade: " + getNivelEscolaridade());
+		System.out.println("Disciplina: " + getDisciplina());
 	}
 
 	public String getNome() 
@@ -47,9 +55,18 @@ public class Professor
 		return dataNascimento;
 	}
 
-	public void setDataNascimento(Date dataNascimento) 
+	public void setDataNascimento(String data) 
 	{
-		this.dataNascimento = dataNascimento;
+		SimpleDateFormat formato = new SimpleDateFormat("dd/mm/yyyy");
+        this.dataNascimento = null;
+        try 
+        {
+        	this.dataNascimento = formato.parse(data);
+        } 
+        catch (Exception e) 
+        {
+            e.printStackTrace();
+        }
 	}
 
 	public String getNivelEscolaridade() 

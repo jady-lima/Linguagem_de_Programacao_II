@@ -1,23 +1,35 @@
 package Atividades.Atividade05;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class ProfessorIntegral extends Professor 
 {
 	private Date dataInicio;
 
-	public ProfessorIntegral(String nome, String matricula, Date dataNascimento, String nivelEscolaridade,String disciplina, double salario, Date dataInicio) 
+	public ProfessorIntegral(String nome, String matricula, String dataNascimento, String nivelEscolaridade,String disciplina, double salario, String dataInicio) 
 	{
 		super(nome, matricula, dataNascimento, nivelEscolaridade, disciplina, salario);
-		this.dataInicio = dataInicio;
+		setDataInicio(dataInicio);
 	}
 
-	public Date getDataInicio() {
+	public Date getDataInicio() 
+	{
 		return dataInicio;
 	}
 
-	public void setDataInicio(Date dataInicio) {
-		this.dataInicio = dataInicio;
+	public void setDataInicio(String data) 
+	{
+		SimpleDateFormat formato = new SimpleDateFormat("dd/mm/yyyy");
+        this.dataInicio = null;
+        try 
+        {
+        	this.dataNascimento = formato.parse(data);
+        } 
+        catch (Exception e) 
+        {
+            e.printStackTrace();
+        }
 	}
 
 }
