@@ -74,7 +74,7 @@ public class ProfessorDAO
             	professorAuxiliar.setNome(professores.get(i).getNome());
             	professorAuxiliar.setMatricula(professores.get(i).getMatricula());
             	professorAuxiliar.setDisciplina(professores.get(i).getDisciplina());
-            	professorAuxiliar.setNivelEscolaridade(professores.get(i).getNivelEscolaridade());
+				professorAuxiliar.setNivelEscolaridade(professores.get(i).getNivelEscolaridade());
             	professorAuxiliar.setSalario(professores.get(i).getSalario());
                 indice = i;
             }
@@ -83,24 +83,39 @@ public class ProfessorDAO
     }
     
     //Retorna o professor mais jovem
-    public int professorMaisJovem()
-    {
+	public int professorMaisJovem()
+	{
+		//variaveis auxiliares
         int indice = 0;
-        SimpleDateFormat formato = new SimpleDateFormat("yyyy");
-        int idade = calendar.get(Calendar.YEAR);
-        int idadeAuxiliar = (idade - Integer.parseInt(formato.format(professores.get(0).getDataNascimento())));
-        
-        for (int i = 0; i<quantProfessores(); i++) 
+        Professor professorAuxiliar = new Professor("", "", "00/00/0000", "", "", 0);
+
+        for (int i = 0; i<quantProfessores(); i++)
         {
-        	idade = idade - Integer.parseInt(formato.format(professores.get(i).getDataNascimento()));
-        	if (idadeAuxiliar >= idade)
-        	{
-        		indice = i;
-        	}
-        } 
+            if(professores.get(i).getIdade() < professorAuxiliar.getIdade())
+            {
+            	professorAuxiliar.setNome(professores.get(i).getNome());
+            	professorAuxiliar.setMatricula(professores.get(i).getMatricula());
+            	professorAuxiliar.setDisciplina(professores.get(i).getDisciplina());
+				professorAuxiliar.setNivelEscolaridade(professores.get(i).getNivelEscolaridade());
+            	professorAuxiliar.setSalario(professores.get(i).getSalario());
+            	professorAuxiliar.setIdade(professores.get(i).getIdade());
+                indice = i;
+            }
+        }
         return indice;
-    }
+	}
 	
+	//Calcula idade
+	public void calculaIdade()
+	{
+		SimpleDateFormat formato = new SimpleDateFormat("yyyy");
+		for(Professor professor: professores)
+		{
+			professor.setIdade(calendar.get(Calendar.YEAR) - Integer.parseInt(formato.format(professor.dataNascimento)));
+			System.out.println("Idade: " + professor.getIdade());
+		}
+	}
+
     //Retorna o total de salarios
     public double totalSalarios()
     {

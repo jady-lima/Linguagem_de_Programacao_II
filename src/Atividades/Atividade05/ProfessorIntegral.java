@@ -20,7 +20,7 @@ public class ProfessorIntegral extends Professor
 
 	public void setDataInicio(String data) 
 	{
-		SimpleDateFormat formato = new SimpleDateFormat("dd/mm/yyyy");
+		SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
         this.dataInicio = null;
         try 
         {

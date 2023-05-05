@@ -8,6 +8,7 @@ public class Professor
 	protected String nome;
 	protected String matricula;
 	protected Date dataNascimento;
+	protected int idade;
 	protected String nivelEscolaridade;
 	protected String disciplina;
 	protected double salario;
@@ -28,6 +29,7 @@ public class Professor
 		System.out.println("Nome: " + getNome() + "; \t" + "Matricula: " + getMatricula());
 		System.out.println("Data de Nascimento: " + getDataNascimento() + "; \t" + "Nivel de escolaridade: " + getNivelEscolaridade());
 		System.out.println("Disciplina: " + getDisciplina());
+		System.out.println("Idade: " + getIdade());
 	}
 
 	public String getNome() 
@@ -57,7 +59,7 @@ public class Professor
 
 	public void setDataNascimento(String data) 
 	{
-		SimpleDateFormat formato = new SimpleDateFormat("dd/mm/yyyy");
+		SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
         this.dataNascimento = null;
         try 
         {
@@ -97,6 +99,16 @@ public class Professor
 	public void setSalario(double salario) 
 	{
 		this.salario = salario;
+	}
+
+	public int getIdade() 
+	{
+		return idade;
+	}
+
+	public void setIdade(int idade) 
+	{
+		this.idade = idade;
 	}
 		
 }

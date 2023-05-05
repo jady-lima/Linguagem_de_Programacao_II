@@ -1,14 +1,13 @@
 package Atividades.Atividade05;
 
-import java.util.Date;
-
 public class ProfessorHorista extends Professor 
 {
 	public static final double VALORDAHORA = 25;
 	
 	private int horasTrabalhadas;
 
-	public ProfessorHorista(String nome, String matricula, String dataNascimento, String nivelEscolaridade,String disciplina, double salario, int horasTrabalhadas) {
+	public ProfessorHorista(String nome, String matricula, String dataNascimento, String nivelEscolaridade,String disciplina, double salario, int horasTrabalhadas) 
+	{
 		super(nome, matricula, dataNascimento, nivelEscolaridade, disciplina, salario);
 		this.horasTrabalhadas = horasTrabalhadas;
 	}
