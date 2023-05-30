@@ -41,6 +41,7 @@ public class TigreDAO {
 		for (Tigre tigre : tigres) {
 			((Tigre)tigre).print();
 			consultaTigres(tigre);
+			System.out.println("cHEGOU NO PRINT");
 		}
 	}
 	

@@ -11,6 +11,7 @@ public class ElefanteDAO {
 	private ArrayList<Elefante> elefantes;
 	SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
 	Date dt = new Date();
+	public Elefante e = new Elefante();
 	
 	private static ElefanteDAO eDao;
 	

@@ -92,9 +92,9 @@ public class TelaPrincipal extends JFrame implements ActionListener
 		mITigre.addActionListener(this);
 		
 		//cria o novo animal dao
-		tigreDAO = new TigreDAO();
-		girafaDAO = new GirafaDAO();
-		elefanteDAO = new ElefanteDAO();
+		//tigreDAO = new TigreDAO();
+		//girafaDAO = new GirafaDAO();
+		//elefanteDAO = new ElefanteDAO();
 	}
 	
 	//FUNÇÃO DE PERFORMACE DE CADA AÇÃO 
@@ -104,13 +104,6 @@ public class TelaPrincipal extends JFrame implements ActionListener
 		//Se clicar no botão para Tigre, surge a tela de cadastro para um novo Tigre
 		if(e.getSource() == mITigre)
 		{
-			try {
-				System.out.println("Esperando .....");
-				Thread.sleep(500);
-			} catch (InterruptedException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
 			
 			System.out.println("Pronto .....");
 			TelaTigre tlTigre = new TelaTigre("Tigre");
@@ -121,13 +114,6 @@ public class TelaPrincipal extends JFrame implements ActionListener
 		//Se clicar no botão para Girafa, surge a tela de cadastro para um novo Girafa
 		else if(e.getSource() == mIGirafa)
 		{
-			try {
-				System.out.println("Esperando .....");
-				Thread.sleep(500);
-			} catch (InterruptedException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
 			
 			System.out.println("Pronto .....");
 			TelaGirafa tlGirafa = new TelaGirafa("Girafa");
@@ -138,13 +124,6 @@ public class TelaPrincipal extends JFrame implements ActionListener
 		//Se clicar no botão para Elefante, surge a tela de cadastro para um novo Elefante
 		else if(e.getSource() == mIElefante)
 		{
-			try {
-				System.out.println("Esperando .....");
-				Thread.sleep(500);
-			} catch (InterruptedException e1) {
-				// TODO Auto-generated catch block
-				e1.printStackTrace();
-			}
 			
 			System.out.println("Pronto .....");
 			TelaElefante tlElefante = new TelaElefante("Elefante");
@@ -155,6 +134,7 @@ public class TelaPrincipal extends JFrame implements ActionListener
 		else if(e.getSource() == mIListarAnimais)
 		{
 			tigreDAO = TigreDAO.getInstance();
+			System.out.println("Chegou no listar");
 			tigreDAO.imprimeTigres();
 			girafaDAO = GirafaDAO.getInstance();
 			girafaDAO.imprimeGirafas();
